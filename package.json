@@ -1,19 +1,18 @@
 {
-  "name": "api",
+  "name": "remote-cam",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=testing node test.js"
+    "test": "NODE_ENV=testing node test.js",
+    "start": "NODE_ENV=development node src/index.js"
   },
   "author": "ashun",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
     "dot-env": "0.0.1",
     "express": "^4.17.1",
-    "loadash": "^1.0.0",
-    "morgan": "^1.9.1"
+    "opencv4nodejs": "^5.5.0",
+    "socket.io": "^2.3.0"
   }
 }

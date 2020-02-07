@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Remote Cam For Prusa</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script>
+      const socket = io.connect('http://localhost:3000')
+      socket.on('stream', data => {
+        const imageElm = document.getElementById('img')
+        imageElm.src = `data:image/jpeg;base64, ${data}`
+      })
+    </script>
+  </head>
+  <body>
+    <img id="img" />
+  </body>
+</html>
